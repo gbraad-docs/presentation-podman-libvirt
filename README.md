@@ -103,11 +103,12 @@ FROM fedora:39
 
 RUN dnf install -y httpd && \
     systemctl enable httpd.service
+    # Note: remove temp
 
 EXPOSE 80
 
-#CMD ["/usr/sbin/init"]
-CMD ["/usr/sbin/httpd"]
+#CMD ["/usr/sbin/httpd"]
+CMD ["/usr/sbin/init"]
 ```
 
 ---
